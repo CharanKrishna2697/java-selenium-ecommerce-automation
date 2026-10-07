@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class DataDrivenLoginTest extends BaseTest {
 
-    @Test(dataProvider = "loginData", dataProviderClass = LoginDataProvider.class)
+    @Test(dataProvider = "loginData", dataProviderClass = LoginDataProvider.class, groups = {"regression", "login"})
     public void verifyLoginWithMultipleUsers(
             String username,
             String password,

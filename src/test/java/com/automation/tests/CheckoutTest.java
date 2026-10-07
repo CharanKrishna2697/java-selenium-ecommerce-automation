@@ -30,7 +30,7 @@ public class CheckoutTest extends BaseTest {
     }
 
     // TC07 - Verify Cart Page
-    @Test(priority = 7)
+    @Test(priority = 7, groups = {"smoke", "checkout"})
     public void verifyCartPage() {
 
         loginAndAddProduct();
@@ -44,7 +44,7 @@ public class CheckoutTest extends BaseTest {
     }
 
     // TC08 - Verify Product In Cart
-    @Test(priority = 8)
+    @Test(priority = 8, groups = {"regression", "checkout"})
     public void verifyProductDetailsInCart() {
 
         loginAndAddProduct();
@@ -64,7 +64,7 @@ public class CheckoutTest extends BaseTest {
     }
 
     // TC09 - Proceed To Checkout
-    @Test(priority = 9)
+    @Test(priority = 9, groups = {"regression", "checkout"})
     public void proceedToCheckout() {
 
         loginAndAddProduct();
@@ -82,7 +82,7 @@ public class CheckoutTest extends BaseTest {
     }
 
     // TC10 - Validate Checkout Information
-    @Test(priority = 10)
+    @Test(priority = 10, groups = {"smoke", "checkout"})
     public void validateCheckoutInformation() {
 
         loginAndAddProduct();
@@ -106,7 +106,7 @@ public class CheckoutTest extends BaseTest {
     }
 
     // TC11 - Complete Order
-    @Test(priority = 11)
+    @Test(priority = 11, groups = {"smoke", "checkout"})
     public void completeOrder() {
 
         loginAndAddProduct();
@@ -132,7 +132,7 @@ public class CheckoutTest extends BaseTest {
     }
 
     // TC12 - Verify Order Confirmation
-    @Test(priority = 12)
+    @Test(priority = 12, groups = {"regression", "checkout"})
     public void verifyOrderConfirmation() {
 
         loginAndAddProduct();

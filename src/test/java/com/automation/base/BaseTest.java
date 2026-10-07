@@ -16,7 +16,7 @@ public class BaseTest {
 
     protected WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
 
         String browser = ConfigReader.getProperty("browser");
@@ -57,7 +57,7 @@ public class BaseTest {
         );
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
 
         if (driver != null) {

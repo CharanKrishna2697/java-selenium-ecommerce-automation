@@ -10,18 +10,20 @@
 
     <test name="E-Commerce Tests">
 
+        <groups>
+
+            <run>
+                <include name="smoke"/>
+            </run>
+
+        </groups>
+
         <classes>
             <class name="com.automation.reporting.ReportConfiguration"/>
-
             <class name="com.automation.tests.LoginTest"/>
-
             <class name="com.automation.tests.ProductsTest"/>
-
             <class name="com.automation.tests.CheckoutTest"/>
-
             <class name="com.automation.tests.DataDrivenLoginTest"/>
-
-
         </classes>
 
     </test>

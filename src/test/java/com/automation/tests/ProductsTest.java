@@ -22,8 +22,7 @@ public class ProductsTest extends BaseTest {
         );
     }
 
-    // TC04 - Verify Products Page
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"smoke", "products"})
     public void verifyProductsPage() {
 
         login();
@@ -36,8 +35,7 @@ public class ProductsTest extends BaseTest {
         );
     }
 
-    // TC05 - Add Product To Cart
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"smoke", "products"})
     public void addProductToCart() {
 
         login();
@@ -53,8 +51,7 @@ public class ProductsTest extends BaseTest {
         );
     }
 
-    // TC06 - Verify Product In Cart
-    @Test(priority = 6)
+    @Test(priority = 6, groups = {"regression", "products"})
     public void verifyProductInCart() {
 
         login();
@@ -62,7 +59,6 @@ public class ProductsTest extends BaseTest {
         ProductsPage productsPage = new ProductsPage(driver);
 
         productsPage.addBackpackToCart();
-
         productsPage.clickCart();
 
         Assert.assertTrue(

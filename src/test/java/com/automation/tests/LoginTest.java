@@ -7,8 +7,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    // TC01 - Valid Login
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"smoke", "login"})
     public void validLoginTest() {
 
         LoginPage loginPage = new LoginPage(driver);
@@ -23,8 +22,7 @@ public class LoginTest extends BaseTest {
         );
     }
 
-    // TC02 - Invalid Login
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"regression", "login"})
     public void invalidLoginTest() {
 
         LoginPage loginPage = new LoginPage(driver);
@@ -41,8 +39,7 @@ public class LoginTest extends BaseTest {
         );
     }
 
-    // TC03 - Locked Out User
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"regression", "login"})
     public void lockedOutUserTest() {
 
         LoginPage loginPage = new LoginPage(driver);
